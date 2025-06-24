@@ -15,7 +15,8 @@ namespace :notify do
     "https://user-guide.operations-engineering.service.justice.gov.uk/api/pages.json",
     "https://docs.opg.service.justice.gov.uk/api/pages.json",
     "https://user-guide.find-moj-data.service.justice.gov.uk/api/pages.json",
-    "https://runbooks.find-moj-data.service.justice.gov.uk/api/pages.json"
+    "https://runbooks.find-moj-data.service.justice.gov.uk/api/pages.json",
+    "https://ministryofjustice.github.io/hmpps-probation-integration-services/tech-docs/api/pages.json"
   ]
 
   limits = {
