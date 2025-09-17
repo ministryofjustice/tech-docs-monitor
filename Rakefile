@@ -5,26 +5,11 @@ task default: ['notify:expired']
 
 namespace :notify do
   pages_urls = [
-    'https://ministryofjustice.github.io/hmpps-integration-api/api/pages.json',
-    'https://ministryofjustice.github.io/nvvs-devops/api/pages.json',
-    'https://runbooks.cloud-platform.service.justice.gov.uk/api/pages.json',
-    'https://docs.analytical-platform.service.justice.gov.uk/api/pages.json',
-    'https://user-guide.cloud-platform.service.justice.gov.uk/api/pages.json',
-    'https://user-guide.modernisation-platform.service.justice.gov.uk/api/pages.json',
-    'https://docs.opg.service.justice.gov.uk/api/pages.json',
-    'https://user-guide.find-moj-data.service.justice.gov.uk/api/pages.json',
-    'https://runbooks.find-moj-data.service.justice.gov.uk/api/pages.json',
-    'https://ministryofjustice.github.io/hmpps-probation-integration-services/tech-docs/api/pages.json',
-    'https://ministryofjustice.github.io/cloud-optimisation-and-accountability/api/pages.json'
+    'https://tech-docs.hmpps.service.justice.gov.uk/search-index.json',
   ]
 
   limits = {
-    'https://ministryofjustice.github.io/nvvs-devops/api/pages.json' => 5,
-    'https://docs.analytical-platform.service.justice.gov.uk/api/pages.json' => 5,
-    'https://user-guide.modernisation-platform.service.justice.gov.uk/api/pages.json' => 5,
-    'https://docs.opg.service.justice.gov.uk/api/pages.json' => 5,
-    'https://user-guide.find-moj-data.service.justice.gov.uk/api/pages.json' => 5,
-    'https://runbooks.find-moj-data.service.justice.gov.uk/api/pages.json' => 5
+    'https://tech-docs.hmpps.service.justice.gov.uk/search-index.json' => 5
   }
 
   live = ENV.fetch('REALLY_POST_TO_SLACK', 0) == '1'
