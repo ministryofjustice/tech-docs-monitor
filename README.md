@@ -11,16 +11,17 @@ It will look at the pages API for your site, find all pages that have expired, a
 
 ![image](https://user-images.githubusercontent.com/26419401/165932087-27d50763-3491-45b8-b597-1f3f53bebabb.png)
 
+## How can I use this service?
 
-## How can I use this service? 
+Usage is simple, you will need to:
 
-Usage is simple, you will need to: 
 - update your documentation as per the example below
 - submit a PR to enable the notifier.
 
-### Example GitHub Pages Configuration 
+### Example GitHub Pages Configuration
 
 In [this](https://github.com/ministryofjustice/cloud-operations/blob/main/source/documentation/team-guide/team-tools.html.md.erb) file the following lines define:
+
 - Slack channel the reminder will be sent to
 - Title of the reminder
 - last reviewed date
@@ -54,7 +55,7 @@ pages_urls = [
 ]
 ```
 
-If you want to limit the number of links that are posted to Slack after a single run, add this to  `limits` in the [`Rakefile`](https://github.com/ministryofjustice/tech-docs-monitor/blob/main/Rakefile)
+If you want to limit the number of links that are posted to Slack after a single run, add this to `limits` in the [`Rakefile`](https://github.com/ministryofjustice/tech-docs-monitor/blob/main/Rakefile)
 
 ```
 limits = {
@@ -66,9 +67,8 @@ The default behaviour is no limit, and the Slack message will contain all pages 
 
 [Rakefile]: https://github.com/alphagov/tech-docs-monitor/blob/master/Rakefile
 
-
-* `SLACK_WEBHOOK_URL`: The Slack webhook URL to allow messages to be posted.
-* `REALLY_POST_TO_SLACK`: Messages will only be posted to Slack if the value of
+- `SLACK_WEBHOOK_URL`: The Slack webhook URL to allow messages to be posted.
+- `REALLY_POST_TO_SLACK`: Messages will only be posted to Slack if the value of
   this var is `1`.
 
 #### Slack message customisation
@@ -80,7 +80,7 @@ This is the default Slack message when pages expire:
 You can customise parts of the Slack message by configuring environment variables. The environment variables you can customise are:
 
 | Environment variable name     | Purpose                                                         | Default value                                                                          |
-|-------------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| ----------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | OVERRIDE_SLACK_MESSAGE_PREFIX | Sets a custom message prefix.                                   | "Hello :paw_prints:, this is your friendly manual spaniel."                            |
 | OVERRIDE_SLACK_CHANNEL        | Sets a single Slack channel to which all messages will be sent. | The owning Slack channel for each page reported in the site's /api/pages.json endpoint |
 | OVERRIDE_SLACK_USERNAME       | Sets the username to which Slack messages are attributed.       | "Daniel the Manual Spaniel"                                                            |
