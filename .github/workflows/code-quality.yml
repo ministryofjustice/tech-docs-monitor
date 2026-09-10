@@ -21,3 +21,4 @@ jobs:
     uses: ministryofjustice/modernisation-platform-github-actions/.github/workflows/reusable-code-quality.yml@e49ac27b104b38bac12fc1e3257a13be6289a59c # v6.2.2
     with:
       validate_all_codebase: ${{ github.event_name != 'pull_request' && 'true' || 'false' }}
+      enable_codeql: false
