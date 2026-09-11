@@ -1,4 +1,4 @@
-[![Standards Icon]][Standards Link] 
+[![Standards Icon]][Standards Link]
 
 # Tech Docs Template - Page Expiry Notifier
 
@@ -65,7 +65,6 @@ limits = {
 
 The default behaviour is no limit, and the Slack message will contain all pages discovered.
 
-[Rakefile]: https://github.com/alphagov/tech-docs-monitor/blob/master/Rakefile
 
 - `SLACK_WEBHOOK_URL`: The Slack webhook URL to allow messages to be posted.
 - `REALLY_POST_TO_SLACK`: Messages will only be posted to Slack if the value of
