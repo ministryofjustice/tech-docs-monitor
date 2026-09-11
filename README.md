@@ -1,6 +1,6 @@
-[![Standards Icon]][Standards Link] 
-
 # Tech Docs Template - Page Expiry Notifier
+
+[![Standards Icon]][Standards Link]
 
 This repository was [forked](https://github.com/alphagov/tech-docs-monitor) from our friends at [alphagov](https://github.com/alphagov). 🤝
 
@@ -27,7 +27,7 @@ In [this](https://github.com/ministryofjustice/cloud-operations/blob/main/source
 - last reviewed date
 - when the document should next be reviewed
 
-```
+```yaml
 ---
 owner_slack: "#mojo-devops"
 title: Team Tools
@@ -47,7 +47,7 @@ review_in: 3 months
 
 If you are part of the `ministryofjustice` GitHub organisation you can enable the notifier by raising a PR to add your published documentation to the [`Rakefile`](https://github.com/ministryofjustice/tech-docs-monitor/blob/main/Rakefile):
 
-```
+```ruby
 pages_urls = [
   "https://ministryofjustice.github.io/cloud-operations/api/pages.json",
   "https://ministryofjustice.github.io/<<your-team-name>>/api/pages.json",
@@ -57,7 +57,7 @@ pages_urls = [
 
 If you want to limit the number of links that are posted to Slack after a single run, add this to `limits` in the [`Rakefile`](https://github.com/ministryofjustice/tech-docs-monitor/blob/main/Rakefile)
 
-```
+```ruby
 limits = {
   "https://ministryofjustice.github.io/<<your-team-name>>/api/pages.json" => 3
 }
@@ -65,7 +65,6 @@ limits = {
 
 The default behaviour is no limit, and the Slack message will contain all pages discovered.
 
-[Rakefile]: https://github.com/alphagov/tech-docs-monitor/blob/master/Rakefile
 
 - `SLACK_WEBHOOK_URL`: The Slack webhook URL to allow messages to be posted.
 - `REALLY_POST_TO_SLACK`: Messages will only be posted to Slack if the value of
